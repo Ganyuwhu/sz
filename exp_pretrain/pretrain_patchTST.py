@@ -75,7 +75,7 @@ def pretrain_patchTST():
     parser.add_argument('--learning_rate', type=float, default=5e-4)
     parser.add_argument('--use_amp', type=bool, default=True)
     parser.add_argument('--loss_individual', type=bool, default=False)
-    parser.add_argument('--pretrained_checkpoints', type=str, default=rf'D:\gzr\project_sz\Pretrained\checkpoints')
+    parser.add_argument('--pretrained_checkpoints', type=str, default=rf'..\Pretrained\checkpoints')
 
     args = parser.parse_args()
 

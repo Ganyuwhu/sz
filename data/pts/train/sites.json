@@ -1,0 +1,226 @@
+{
+  "西乡": {
+    "data_path": "..\\data\\pts\\train\\西乡_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\西乡_stamp.pt"
+  },
+  "福永": {
+    "data_path": "..\\data\\pts\\train\\福永_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\福永_stamp.pt"
+  },
+  "沙井": {
+    "data_path": "..\\data\\pts\\train\\沙井_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\沙井_stamp.pt"
+  },
+  "松岗": {
+    "data_path": "..\\data\\pts\\train\\松岗_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\松岗_stamp.pt"
+  },
+  "西乡街道": {
+    "data_path": "..\\data\\pts\\train\\西乡街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\西乡街道_stamp.pt"
+  },
+  "航城街道": {
+    "data_path": "..\\data\\pts\\train\\航城街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\航城街道_stamp.pt"
+  },
+  "石岩街道": {
+    "data_path": "..\\data\\pts\\train\\石岩街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\石岩街道_stamp.pt"
+  },
+  "福海街道": {
+    "data_path": "..\\data\\pts\\train\\福海街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\福海街道_stamp.pt"
+  },
+  "新桥街道": {
+    "data_path": "..\\data\\pts\\train\\新桥街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\新桥街道_stamp.pt"
+  },
+  "葵涌": {
+    "data_path": "..\\data\\pts\\train\\葵涌_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\葵涌_stamp.pt"
+  },
+  "大鹏街道": {
+    "data_path": "..\\data\\pts\\train\\大鹏街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\大鹏街道_stamp.pt"
+  },
+  "莲花": {
+    "data_path": "..\\data\\pts\\train\\莲花_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\莲花_stamp.pt"
+  },
+  "南园街道": {
+    "data_path": "..\\data\\pts\\train\\南园街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\南园街道_stamp.pt"
+  },
+  "园岭街道": {
+    "data_path": "..\\data\\pts\\train\\园岭街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\园岭街道_stamp.pt"
+  },
+  "梅林街道": {
+    "data_path": "..\\data\\pts\\train\\梅林街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\梅林街道_stamp.pt"
+  },
+  "福保街道": {
+    "data_path": "..\\data\\pts\\train\\福保街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\福保街道_stamp.pt"
+  },
+  "华富街道": {
+    "data_path": "..\\data\\pts\\train\\华富街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\华富街道_stamp.pt"
+  },
+  "香蜜湖街道": {
+    "data_path": "..\\data\\pts\\train\\香蜜湖街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\香蜜湖街道_stamp.pt"
+  },
+  "通心岭": {
+    "data_path": "..\\data\\pts\\train\\通心岭_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\通心岭_stamp.pt"
+  },
+  "光明": {
+    "data_path": "..\\data\\pts\\train\\光明_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\光明_stamp.pt"
+  },
+  "凤凰街道": {
+    "data_path": "..\\data\\pts\\train\\凤凰街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\凤凰街道_stamp.pt"
+  },
+  "公明街道": {
+    "data_path": "..\\data\\pts\\train\\公明街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\公明街道_stamp.pt"
+  },
+  "马田街道": {
+    "data_path": "..\\data\\pts\\train\\马田街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\马田街道_stamp.pt"
+  },
+  "布吉街道": {
+    "data_path": "..\\data\\pts\\train\\布吉街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\布吉街道_stamp.pt"
+  },
+  "园山街道": {
+    "data_path": "..\\data\\pts\\train\\园山街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\园山街道_stamp.pt"
+  },
+  "龙岗街道": {
+    "data_path": "..\\data\\pts\\train\\龙岗街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\龙岗街道_stamp.pt"
+  },
+  "平湖街道": {
+    "data_path": "..\\data\\pts\\train\\平湖街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\平湖街道_stamp.pt"
+  },
+  "宝龙街道": {
+    "data_path": "..\\data\\pts\\train\\宝龙街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\宝龙街道_stamp.pt"
+  },
+  "坂田街道": {
+    "data_path": "..\\data\\pts\\train\\坂田街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\坂田街道_stamp.pt"
+  },
+  "南湾街道": {
+    "data_path": "..\\data\\pts\\train\\南湾街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\南湾街道_stamp.pt"
+  },
+  "观湖街道": {
+    "data_path": "..\\data\\pts\\train\\观湖街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\观湖街道_stamp.pt"
+  },
+  "福城街道": {
+    "data_path": "..\\data\\pts\\train\\福城街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\福城街道_stamp.pt"
+  },
+  "大浪街道": {
+    "data_path": "..\\data\\pts\\train\\大浪街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\大浪街道_stamp.pt"
+  },
+  "龙华街道": {
+    "data_path": "..\\data\\pts\\train\\龙华街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\龙华街道_stamp.pt"
+  },
+  "洪湖": {
+    "data_path": "..\\data\\pts\\train\\洪湖_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\洪湖_stamp.pt"
+  },
+  "南湖": {
+    "data_path": "..\\data\\pts\\train\\南湖_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\南湖_stamp.pt"
+  },
+  "黄贝街道": {
+    "data_path": "..\\data\\pts\\train\\黄贝街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\黄贝街道_stamp.pt"
+  },
+  "东湖街道": {
+    "data_path": "..\\data\\pts\\train\\东湖街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\东湖街道_stamp.pt"
+  },
+  "桂园街道": {
+    "data_path": "..\\data\\pts\\train\\桂园街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\桂园街道_stamp.pt"
+  },
+  "清水河街道": {
+    "data_path": "..\\data\\pts\\train\\清水河街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\清水河街道_stamp.pt"
+  },
+  "翠竹街道": {
+    "data_path": "..\\data\\pts\\train\\翠竹街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\翠竹街道_stamp.pt"
+  },
+  "东门街道": {
+    "data_path": "..\\data\\pts\\train\\东门街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\东门街道_stamp.pt"
+  },
+  "东晓街道": {
+    "data_path": "..\\data\\pts\\train\\东晓街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\东晓街道_stamp.pt"
+  },
+  "南头街道": {
+    "data_path": "..\\data\\pts\\train\\南头街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\南头街道_stamp.pt"
+  },
+  "西丽街道": {
+    "data_path": "..\\data\\pts\\train\\西丽街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\西丽街道_stamp.pt"
+  },
+  "蛇口街道": {
+    "data_path": "..\\data\\pts\\train\\蛇口街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\蛇口街道_stamp.pt"
+  },
+  "招商街道": {
+    "data_path": "..\\data\\pts\\train\\招商街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\招商街道_stamp.pt"
+  },
+  "粤海街道": {
+    "data_path": "..\\data\\pts\\train\\粤海街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\粤海街道_stamp.pt"
+  },
+  "南科大": {
+    "data_path": "..\\data\\pts\\train\\南科大_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\南科大_stamp.pt"
+  },
+  "石井街道": {
+    "data_path": "..\\data\\pts\\train\\石井街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\石井街道_stamp.pt"
+  },
+  "坑梓街道": {
+    "data_path": "..\\data\\pts\\train\\坑梓街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\坑梓街道_stamp.pt"
+  },
+  "龙田街道": {
+    "data_path": "..\\data\\pts\\train\\龙田街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\龙田街道_stamp.pt"
+  },
+  "碧岭街道": {
+    "data_path": "..\\data\\pts\\train\\碧岭街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\碧岭街道_stamp.pt"
+  },
+  "盐田": {
+    "data_path": "..\\data\\pts\\train\\盐田_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\盐田_stamp.pt"
+  },
+  "沙头角街道": {
+    "data_path": "..\\data\\pts\\train\\沙头角街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\沙头角街道_stamp.pt"
+  },
+  "盐田街道": {
+    "data_path": "..\\data\\pts\\train\\盐田街道_data.pt",
+    "stamp_path": "..\\data\\pts\\train\\盐田街道_stamp.pt"
+  }
+}

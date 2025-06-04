@@ -1,0 +1,22 @@
+{
+  "南澳": {
+    "data_path": "..\\data\\pts\\test\\南澳_data.pt",
+    "stamp_path": "..\\data\\pts\\test\\南澳_stamp.pt"
+  },
+  "横岗": {
+    "data_path": "..\\data\\pts\\test\\横岗_data.pt",
+    "stamp_path": "..\\data\\pts\\test\\横岗_stamp.pt"
+  },
+  "民治": {
+    "data_path": "..\\data\\pts\\test\\民治_data.pt",
+    "stamp_path": "..\\data\\pts\\test\\民治_stamp.pt"
+  },
+  "华侨城": {
+    "data_path": "..\\data\\pts\\test\\华侨城_data.pt",
+    "stamp_path": "..\\data\\pts\\test\\华侨城_stamp.pt"
+  },
+  "坪山": {
+    "data_path": "..\\data\\pts\\test\\坪山_data.pt",
+    "stamp_path": "..\\data\\pts\\test\\坪山_stamp.pt"
+  }
+}

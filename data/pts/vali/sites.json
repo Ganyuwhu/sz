@@ -1,0 +1,58 @@
+{
+  "燕罗街道": {
+    "data_path": "..\\data\\pts\\vali\\燕罗街道_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\燕罗街道_stamp.pt"
+  },
+  "福田街道": {
+    "data_path": "..\\data\\pts\\vali\\福田街道_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\福田街道_stamp.pt"
+  },
+  "沙头街道": {
+    "data_path": "..\\data\\pts\\vali\\沙头街道_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\沙头街道_stamp.pt"
+  },
+  "新湖街道": {
+    "data_path": "..\\data\\pts\\vali\\新湖街道_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\新湖街道_stamp.pt"
+  },
+  "玉塘街道": {
+    "data_path": "..\\data\\pts\\vali\\玉塘街道_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\玉塘街道_stamp.pt"
+  },
+  "龙岗": {
+    "data_path": "..\\data\\pts\\vali\\龙岗_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\龙岗_stamp.pt"
+  },
+  "吉华街道": {
+    "data_path": "..\\data\\pts\\vali\\吉华街道_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\吉华街道_stamp.pt"
+  },
+  "坪地街道": {
+    "data_path": "..\\data\\pts\\vali\\坪地街道_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\坪地街道_stamp.pt"
+  },
+  "观澜": {
+    "data_path": "..\\data\\pts\\vali\\观澜_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\观澜_stamp.pt"
+  },
+  "莲塘街道": {
+    "data_path": "..\\data\\pts\\vali\\莲塘街道_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\莲塘街道_stamp.pt"
+  },
+  "南海": {
+    "data_path": "..\\data\\pts\\vali\\南海_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\南海_stamp.pt"
+  },
+  "前海": {
+    "data_path": "..\\data\\pts\\vali\\前海_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\前海_stamp.pt"
+  },
+  "马峦街道": {
+    "data_path": "..\\data\\pts\\vali\\马峦街道_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\马峦街道_stamp.pt"
+  },
+  "梅沙": {
+    "data_path": "..\\data\\pts\\vali\\梅沙_data.pt",
+    "stamp_path": "..\\data\\pts\\vali\\梅沙_stamp.pt"
+  }
+}

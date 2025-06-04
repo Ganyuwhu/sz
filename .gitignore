@@ -1,0 +1,4 @@
+*.pt
+*.parquet
+*.npy
+*.pth

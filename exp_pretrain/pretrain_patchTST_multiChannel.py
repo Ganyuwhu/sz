@@ -24,7 +24,7 @@ def pretrain_patchTST_multiChannel():
     # dataloader
     # parser.add_argument('--data_path', type=str,
     #                     default=rf"D:\gzr\sz\samples\merged_air_meteo_data_pretrain_withtest.csv")
-    parser.add_argument('--batch_size', type=int, default=64)
+    parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument('--scaler_path', type=str, default=None)
     parser.add_argument('--scale', type=str, default=None)
     parser.add_argument('--freq', type=str, default='h')
@@ -58,10 +58,10 @@ def pretrain_patchTST_multiChannel():
     parser.add_argument('--lradj', type=str, default='type3')
     parser.add_argument('--patience', type=int, default=10)
     parser.add_argument('--pct_start', type=float, default=0.3)
-    parser.add_argument('--train_epochs', type=int, default=50)
+    parser.add_argument('--train_epochs', type=int, default=10)
 
     # device
-    parser.add_argument('--gpu', type=str, default='1')
+    parser.add_argument('--gpu', type=str, default='0')
     parser.add_argument('--use_gpu', type=bool, default=True)
     parser.add_argument('--use_multi_gpu', action='store_true', help='use multiple gpus', default=False)
     parser.add_argument('--test_flop', action='store_true', default=False, help='See utils/tools for usage')
@@ -71,10 +71,10 @@ def pretrain_patchTST_multiChannel():
     parser.add_argument('--mission', type=str, default='train')
     parser.add_argument('--pretrain', type=bool, default=True)
     parser.add_argument('--fine-tuned', type=bool, default=True)
-    parser.add_argument('--learning_rate', type=float, default=5e-4)
+    parser.add_argument('--learning_rate', type=float, default=1e-3)
     parser.add_argument('--use_amp', type=bool, default=False)
     parser.add_argument('--loss_individual', type=bool, default=False)
-    parser.add_argument('--pretrained_checkpoints', type=str, default=rf'D:\gzr\project_sz\Pretrained\checkpoints')
+    parser.add_argument('--pretrained_checkpoints', type=str, default=rf'..\Pretrained\checkpoints')
 
     args = parser.parse_args()
 

@@ -20,10 +20,10 @@ def draw(npy_files:list):
 
 if __name__ == '__main__':
     npy_files = [
-        r'D:\gzr\project_sz\exp_pretrain\result\patchTST_train_loss.npy',
-        r'D:\gzr\project_sz\exp_pretrain\result\patchTST_vali_loss.npy',
-        r'D:\gzr\project_sz\exp_pretrain\result\patchTST2_train_loss.npy',
-        r'D:\gzr\project_sz\exp_pretrain\result\patchTST2_vali_loss.npy',
+        r'..\exp_pretrain\result\patchTST_train_loss.npy',
+        r'..\exp_pretrain\result\patchTST_vali_loss.npy',
+        r'..\exp_pretrain\result\patchTST2_train_loss.npy',
+        r'..\exp_pretrain\result\patchTST2_vali_loss.npy',
     ]
 
     draw(npy_files)

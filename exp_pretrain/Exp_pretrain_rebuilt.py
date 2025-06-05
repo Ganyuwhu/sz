@@ -281,8 +281,8 @@ class Exp_Pretrain(Exp_Basic):
         best_model_path = path + '/' + 'checkpoint.pth'
         torch.save(self.model, best_model_path)
 
-        np.save(f'{self.args.model}_train_loss.npy', epoch_train_loss)
-        np.save(f'{self.args.model}_vali_loss.npy', epoch_vali_loss)
+        np.save(rf'..\exp_pretrain\result\{self.setting}_train_loss.npy', epoch_train_loss)
+        np.save(rf'..\exp_pretrain\result\{self.setting}_vali_loss.npy', epoch_vali_loss)
 
         return self.model
 

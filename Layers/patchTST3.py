@@ -200,6 +200,68 @@ class TSTiEncoder(nn.Module):
         return x
 
 
+class TSTDecoderLayer(nn.Module):
+    def __init__(self, d_model, n_heads, d_k=None, d_v=None, d_ff=256, norm='LayerNorm', attn_dropout=0., dropout=0.1,
+                 activation="gelu", res_attention=False, pre_norm=False):
+        """
+        :param d_model: 输入向量最后一个维度的元素数
+        :param n_heads: 多头注意力的头的个数
+        :param d_k: 键的维度
+        :param d_v: 值的维度
+        :param d_ff: ff网络中间层的温度
+        :param norm: 归一化方法
+        :param attn_dropout: 注意力模块的dropout值
+        :param dropout: ff网络的dropout值
+        :param activation: 激活函数类型
+        :param res_attention: 是否保留当前层的注意力得分
+        :param pre_norm: 是否在执行计算前进行归一化
+        """
+        super().__init__()
+
+        assert not d_model % n_heads, f"d_model ({d_model}) must be divisible by n_heads ({n_heads})"
+        d_k = d_model // n_heads if d_k is None else d_k
+        d_v = d_model // n_heads if d_v is None else d_v
+
+        # Multi-Head attention
+        self.res_attention = res_attention
+        self.time_attn = MultiheadAttention(d_model, n_heads, d_k, d_v, attn_dropout=attn_dropout,
+                                            proj_dropout=dropout, res_attention=res_attention)
+        self.self_attn = MultiheadAttention(d_model, n_heads, d_k, d_v, attn_dropout=attn_dropout,
+                                            proj_dropout=dropout, res_attention=res_attention)
+
+        # Add & Norm
+        self.dropout_attn = nn.Dropout(dropout)
+        if "batch" in norm.lower():
+            self.norm_attn = nn.Sequential(Transpose(1, 2), nn.BatchNorm1d(d_model), Transpose(1, 2))
+        else:
+            self.norm_attn = nn.LayerNorm(d_model)
+
+        # Position-wise Feed-Forward
+        self.ff = nn.Sequential(nn.Linear(d_model, d_ff, bias=True),
+                                get_activation_fn(activation),
+                                nn.Dropout(dropout),
+                                nn.Linear(d_ff, d_model, bias=True))
+
+        # Add & Norm
+        self.dropout_ffn = nn.Dropout(dropout)
+        if "batch" in norm.lower():
+            self.norm_ffn = nn.Sequential(Transpose(1, 2), nn.BatchNorm1d(d_model), Transpose(1, 2))
+        else:
+            self.norm_ffn = nn.LayerNorm(d_model)
+
+        self.pre_norm = pre_norm
+
+    def forward(self, src: Tensor, encoder_output: Tensor, time_stamp, prev: Optional[Tensor] = None,
+                time_prev: Optional[Tensor] = None, key_padding_mask: Optional[Tensor] = None, attn_mask:
+                Optional[Tensor] = None):
+
+        # src: [B, N, L, C]
+        B, N, L, C = src.shape
+        pass
+
+
+
+
 class patchTST2(nn.Module):
     def __init__(self, context_window: int, target_window: int, patch_len: int, stride: int,
                  pe: str = 'zeros', learn_pe: bool = True, n_layers: int = 3, d_model: int = 128,

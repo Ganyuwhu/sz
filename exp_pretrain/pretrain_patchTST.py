@@ -22,8 +22,8 @@ def pretrain_patchTST():
     parser.add_argument('--target_window', type=int, default=168, help='prediction sequence length')
 
     # dataloader
-    # parser.add_argument('--data_path', type=str,
-    #                     default=rf"D:\gzr\sz\samples\merged_air_meteo_data_pretrain_withtest.csv")
+    parser.add_argument('--data_path', type=str,
+                        default=rf'..\data\samples\merged_air_meteo_data_lc_newtestsite_train_stride0.parquet')
     parser.add_argument('--batch_size', type=int, default=64)
     parser.add_argument('--scaler_path', type=str, default=None)
     parser.add_argument('--scale', type=str, default=None)

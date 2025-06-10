@@ -271,6 +271,7 @@ class patchTST(nn.Module):
 
         # model
         z = self.backbone(z, time_stamp)  # z: [bs x nvars x d_model x seq_len]
+        print(f'z:{z.shape}')
         z = self.head(z)  # z: [bs x nvars_out x target_window]
 
         # denormalize

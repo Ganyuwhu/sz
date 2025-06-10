@@ -1,4 +1,5 @@
 import argparse
+import os
 import random
 import json
 import pandas as pd
@@ -133,13 +134,14 @@ class Pretrain_Dataset(Dataset):
             self.target_index = None
 
     def __read_data__(self):
-        if self.data_path is None:
-            pass
-        elif self.data_path.suffix in ['.csv', '.parquet']:
-            to_pt(self)
+        sites_json_path = rf'..\data\pts\{self.mission}\sites.json'
+        if not os.path.exists(sites_json_path):
+            if self.data_path is None:
+                pass
+            elif Path(self.data_path).suffix in ['.csv', '.parquet']:
+                to_pt(self)
 
         # 每个.pt文件保存了形状为[8736, 39]的张量
-        sites_json_path = rf'..\data\pts\{self.mission}\sites.json'
         with open(sites_json_path, 'r', encoding='utf-8') as f:
             self.index_map = json.load(f)
 
@@ -196,6 +198,22 @@ class Pretrain_Dataset(Dataset):
     def __len__(self):
         return sum(self.lengths)
 
+    # 获取不同污染物的均值和方差
+    @property
+    def statistic(self):
+        datas = pd.read_parquet(self.data_path)
+        mean_list = []
+        std_list = []
+        for item in self.target:
+            mean_list.append(datas[item].mean())
+            std_list.append(datas[item].std())
+
+        statistic_dict = {
+            'means': mean_list,
+            'stds': std_list
+        }
+        return statistic_dict
+
 
 def pretrained_dataset_provider(args):
     memory = None if args.memory is None else Memory(args.memory)
@@ -207,7 +225,7 @@ def pretrained_dataset_provider(args):
         batch_size = args.batch_size
 
         data_set = Pretrain_Dataset(
-            None,
+            args.data_path,
             memory,
             sites,
             args.scale,
@@ -228,7 +246,7 @@ def pretrained_dataset_provider(args):
         batch_size = args.batch_size
 
         data_set = Pretrain_Dataset(
-            None,
+            args.data_path,
             memory,
             sites,
             args.scale,
@@ -249,7 +267,7 @@ def pretrained_dataset_provider(args):
         batch_size = args.batch_size
 
         data_set = Pretrain_Dataset(
-            None,
+            args.data_path,
             memory,
             sites,
             args.scale,
@@ -290,8 +308,8 @@ if __name__ == '__main__':
     parser.add_argument('--target_window', type=int, default=168, help='prediction sequence length')
 
     # dataloader
-    # parser.add_argument('--data_path', type=str,
-    #                     default=rf"D:\gzr\sz\samples\merged_air_meteo_data_pretrain_withtest.csv")
+    parser.add_argument('--data_path', type=str,
+                        default=rf'..\data\samples\merged_air_meteo_data_lc_newtestsite_train_stride0.parquet')
     parser.add_argument('--batch_size', type=int, default=64)
     parser.add_argument('--scaler_path', type=str, default=None)
     parser.add_argument('--scale', type=str, default=None)
@@ -319,6 +337,7 @@ if __name__ == '__main__':
     parser.add_argument('--pretrain_head', type=bool, default=False)
     parser.add_argument('--head_type', type=str, default='flatten')
     parser.add_argument('--memory', type=str, default=r'..\Memories.txt')
+    parser.add_argument('--add_influence', type=bool, default=True)
 
     # optim
     parser.add_argument('--lradj', type=str, default='type3')
@@ -334,7 +353,7 @@ if __name__ == '__main__':
     parser.add_argument('--num_workers', type=int, default=20)
 
     # exp
-    parser.add_argument('--mission', type=str, default='test')
+    parser.add_argument('--mission', type=str, default='train')
     parser.add_argument('--pretrain', type=bool, default=True)
     parser.add_argument('--fine-tuned', type=bool, default=True)
     parser.add_argument('--learning_rate', type=float, default=1e-3)
@@ -345,9 +364,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     data_set, data_loader = pretrained_dataset_provider(args)
-    for i, batch in enumerate(data_loader):
-        batch_x = batch['x']
-        batch_y = batch['y']
-        batch_stamp = batch['stamp']
-        batch_full = batch['full_data']
-        print(batch_x.shape, batch_y.shape, batch_stamp.shape, batch_full.shape)
+
+    print(data_set.statistic)

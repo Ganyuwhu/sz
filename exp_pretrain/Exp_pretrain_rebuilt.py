@@ -135,6 +135,7 @@ class Exp_Pretrain(Exp_Basic):
     def train(self):
         path = os.path.join(self.args.pretrained_checkpoints, self.setting)
         train_loader = self.data_loader['train_dataloader']
+        train_dataset = self.data_set['train_dataset']
 
         if not os.path.exists(path):
             os.makedirs(path)
@@ -163,14 +164,9 @@ class Exp_Pretrain(Exp_Basic):
         print(f'epochs:{train_epochs}')
 
         # 计算batch_y的标准差和均值作为模型先验
-        total_y = []
-        for batch in tqdm(train_loader):
-            total_y.append(batch['y'])
-        total_y = torch.stack(total_y, dim=0)
-        total_y = total_y.reshape(-1, total_y.shape[2])
-        total_mean = total_y.mean(dim=0)
-        total_std = total_y.std(dim=0)
-        print(self.model.model.beta, self.model.model.gamma)
+        statistic_dict = train_dataset.statistic
+        total_mean = torch.tensor(statistic_dict['means'])
+        total_std = torch.tensor(statistic_dict['stds'])
         with torch.no_grad():  # 避免不必要的梯度计算
             self.model.model.beta.data.copy_(total_mean.to(self.device))
             self.model.model.gamma.data.copy_(total_std.to(self.device))
